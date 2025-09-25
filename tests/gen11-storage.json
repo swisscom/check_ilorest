@@ -1,0 +1,179 @@
+[
+  {
+    "@odata.etag": "\"f8d1d33a\"",
+    "@odata.id": "/redfish/v1/Systems/1/Storage/DE00E000",
+    "@odata.type": "#Storage.v1_11_0.Storage",
+    "Controllers": {
+      "@odata.id": "/redfish/v1/Systems/1/Storage/DE00E000/Controllers"
+    },
+    "Drives": [],
+    "Drives@odata.count": 0,
+    "Id": "DE00E000",
+    "Name": "HPE MR416i-o Gen11",
+    "Status": {
+      "HealthRollup": "OK",
+      "State": "Enabled"
+    },
+    "Volumes": {
+      "@odata.id": "/redfish/v1/Systems/1/Storage/DE00E000/Volumes"
+    }
+  },
+  {
+    "@odata.etag": "W/\"4d726807\"",
+    "@odata.id": "/redfish/v1/Systems/1/Storage/DE00B000",
+    "@odata.type": "#Storage.v1_7_1.Storage",
+    "Drives": [
+      {
+        "@odata.id": "/redfish/v1/Systems/1/Storage/DE00B000/Drives/1"
+      },
+      {
+        "@odata.id": "/redfish/v1/Systems/1/Storage/DE00B000/Drives/2"
+      }
+    ],
+    "Drives@odata.count": 2,
+    "Id": "DE00B000",
+    "Name": "HPE NS204i-u Gen11 Boot Controller",
+    "Status": {
+      "HealthRollup": "OK",
+      "State": "Enabled"
+    },
+    "StorageControllers": [
+      {
+        "@odata.id": "/redfish/v1/Systems/1/Storage/DE00B000#/StorageControllers/0",
+        "CacheSummary": {
+          "PersistentCacheSizeMiB": 0,
+          "Status": {
+            "Health": "OK",
+            "State": "Absent"
+          },
+          "TotalCacheSizeMiB": 0
+        },
+        "ControllerRates": {
+          "ConsistencyCheckRatePercent": 100,
+          "RebuildRatePercent": 100
+        },
+        "FirmwareVersion": "1.2.14.1004",
+        "Identifiers": [
+          {
+            "DurableName": "51:40:2e:c0:21:1b:f2:70",
+            "DurableNameFormat": "NAA"
+          }
+        ],
+        "Location": {
+          "PartLocation": {
+            "LocationOrdinalValue": 16,
+            "LocationType": "Slot",
+            "ServiceLabel": "Slot 16"
+          }
+        },
+        "Manufacturer": "HPE",
+        "MemberId": "0",
+        "Model": "HPE NS204i-u Gen11 Boot Controller",
+        "PCIeInterface": {
+          "LanesInUse": 2,
+          "MaxLanes": 4,
+          "MaxPCIeType": "Gen3",
+          "PCIeType": "Gen3"
+        },
+        "PartNumber": "P48185-001",
+        "SKU": "P48183-B21",
+        "SerialNumber": "XXXXXXXXXXXXXX",
+        "Status": {
+          "Health": "OK",
+          "State": "Enabled"
+        },
+        "SupportedControllerProtocols": [
+          "PCIe"
+        ],
+        "SupportedDeviceProtocols": [
+          "NVMe"
+        ],
+        "SupportedRAIDTypes": [
+          "RAID1"
+        ]
+      }
+    ],
+    "Volumes": {
+      "@odata.id": "/redfish/v1/Systems/1/Storage/DE00B000/Volumes"
+    }
+  },
+  {
+    "@odata.etag": "W/\"4d726807\"",
+    "@odata.id": "/redfish/v1/Systems/1/Storage/DE00B000",
+    "@odata.type": "#Storage.v1_7_1.Storage",
+    "Drives": [
+      {
+        "@odata.id": "/redfish/v1/Systems/1/Storage/DE00B000/Drives/1"
+      },
+      {
+        "@odata.id": "/redfish/v1/Systems/1/Storage/DE00B000/Drives/2"
+      }
+    ],
+    "Drives@odata.count": 2,
+    "Id": "DE00B000",
+    "Name": "HPE NS204i-u Gen11 Boot Controller",
+    "Status": {
+      "HealthRollup": "OK",
+      "State": "Enabled"
+    },
+    "StorageControllers": [
+      {
+        "@odata.id": "/redfish/v1/Systems/1/Storage/DE00B000#/StorageControllers/0",
+        "CacheSummary": {
+          "PersistentCacheSizeMiB": 0,
+          "Status": {
+            "Health": "OK",
+            "State": "Absent"
+          },
+          "TotalCacheSizeMiB": 0
+        },
+        "ControllerRates": {
+          "ConsistencyCheckRatePercent": 100,
+          "RebuildRatePercent": 100
+        },
+        "FirmwareVersion": "1.2.14.1004",
+        "Identifiers": [
+          {
+            "DurableName": "51:40:2e:c0:21:1b:f2:70",
+            "DurableNameFormat": "NAA"
+          }
+        ],
+        "Location": {
+          "PartLocation": {
+            "LocationOrdinalValue": 16,
+            "LocationType": "Slot",
+            "ServiceLabel": "Slot 16"
+          }
+        },
+        "Manufacturer": "HPE",
+        "MemberId": "0",
+        "Model": "HPE NS204i-u Gen11 Boot Controller",
+        "PCIeInterface": {
+          "LanesInUse": 2,
+          "MaxLanes": 4,
+          "MaxPCIeType": "Gen3",
+          "PCIeType": "Gen3"
+        },
+        "PartNumber": "P48185-001",
+        "SKU": "P48183-B21",
+        "SerialNumber": "XXXXXXXXXXXXXX",
+        "Status": {
+          "Health": "OK",
+          "State": "Enabled"
+        },
+        "SupportedControllerProtocols": [
+          "PCIe"
+        ],
+        "SupportedDeviceProtocols": [
+          "NVMe"
+        ],
+        "SupportedRAIDTypes": [
+          "RAID1"
+        ]
+      }
+    ],
+    "Volumes": {
+      "@odata.id": "/redfish/v1/Systems/1/Storage/DE00B000/Volumes"
+    }
+  }
+]

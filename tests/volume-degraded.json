@@ -1,0 +1,39 @@
+{
+  "BlockSizeBytes": 512,
+  "CapacityBytes": 480036519936,
+  "DisplayName": "VD_1",
+  "Encrypted": false,
+  "Id": "1",
+  "Identifiers": [
+    {
+      "DurableName": "0050439801000001",
+      "DurableNameFormat": "EUI"
+    }
+  ],
+  "Links": {
+    "DedicatedSpareDrives": [],
+    "DedicatedSpareDrives@odata.count": 0,
+    "Drives": [
+      {
+        "@odata.id": "/redfish/v1/Systems/1/Storage/DE00B000/Drives/1"
+      },
+      {
+        "@odata.id": "/redfish/v1/Systems/1/Storage/DE00B000/Drives/2"
+      }
+    ],
+    "Drives@odata.count": 2
+  },
+  "LogicalUnitNumber": 1,
+  "Name": "NS Volume",
+  "Operations": [],
+  "OptimumIOSizeBytes": 131072,
+  "RAIDType": "RAID1",
+  "ReadCachePolicy": "Off",
+  "Status": {
+    "Health": "Warning",
+    "State": "Enabled"
+  },
+  "StripSizeBytes": 131072,
+  "VolumeUsage": "Data",
+  "WriteCachePolicy": "Off"
+}

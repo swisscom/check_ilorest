@@ -1,0 +1,709 @@
+{
+  "PowerSupply Redundancy Group 1": {
+    "Redundancy Health": "OK",
+    "Redundancy Mode": "Failover",
+    "Redundancy State": "Enabled"
+  },
+  "fans": {
+    "Fan 1": {
+      "Health": "OK",
+      "Hot Pluggable": true,
+      "Location": "System",
+      "Reading": "10%",
+      "Redundant": true,
+      "State": "Enabled"
+    },
+    "Fan 2": {
+      "Health": "OK",
+      "Hot Pluggable": true,
+      "Location": "System",
+      "Reading": "10%",
+      "Redundant": true,
+      "State": "Enabled"
+    },
+    "Fan 3": {
+      "Health": "OK",
+      "Hot Pluggable": true,
+      "Location": "System",
+      "Reading": "10%",
+      "Redundant": true,
+      "State": "Enabled"
+    },
+    "Fan 4": {
+      "Health": "OK",
+      "Hot Pluggable": true,
+      "Location": "System",
+      "Reading": "10%",
+      "Redundant": true,
+      "State": "Enabled"
+    },
+    "Fan 5": {
+      "Health": "OK",
+      "Hot Pluggable": true,
+      "Location": "System",
+      "Reading": "10%",
+      "Redundant": true,
+      "State": "Enabled"
+    },
+    "Fan 6": {
+      "Health": "OK",
+      "Hot Pluggable": true,
+      "Location": "System",
+      "Reading": "10%",
+      "Redundant": true,
+      "State": "Enabled"
+    }
+  },
+  "firmware": [
+    "iLO 6: 1.40 May 12 2023",
+    "System ROM: U54 v1.40 (06/29/2023)",
+    "Intelligent Platform Abstraction Data: 7.0.0 Build 27",
+    "System Programmable Logic Device: 0x11",
+    "Power Supply Firmware: 2.01",
+    "Power Supply Firmware: 2.01",
+    "Server Platform Services (SPS) Firmware: 6.0.4.33.0",
+    "Redundant System ROM: U54 v1.32 (03/23/2023)",
+    "Intelligent Provisioning: 4.20.11",
+    "HPE Smart Storage Energy Pack 1 Firmware: 0.70",
+    "PCIe Riser 1 Programmable Logic Device: 10",
+    "PCIe Riser 2 Programmable Logic Device: 10",
+    "TPM Firmware: 1.512",
+    "HPE MR416i-o Gen11: 52.22.3-4650",
+    "BCM 5719 1Gb 4p BASE-T OCP Adptr: 20.24.41",
+    "HPE SN1610E 32Gb 2p FC HBA: 12.6.275.12",
+    "Intel(R) Eth E810-XXVDA2: 4.10 (0x80015188)",
+    "Broadcom P225p NetXtreme-E Dual-port 10Gb/25Gb Ethernet PCIe Adapter: 214.0.194.0",
+    "Mellanox Network Adapter - B8:3F:xx:xx:xx:xx: 26.34.1002",
+    "HPE NS204i-u Gen11 Boot Controller: 1.2.14.1004",
+    "Embedded Video Controller: 2.5",
+    "480GB 16G NVMe SSD: HPK2",
+    "HPE 300GB 12G SAS HDD: HPD8",
+    "HPE 300GB 12G SAS HDD: HPD9",
+    "8 SFF 24G x1NVMe/SAS UBM6 BC BP: 1.00",
+    "8 SFF 24G x1NVMe/SAS UBM6 BC BP: 1.00"
+  ],
+  "memory": {
+    "Memory/DIMM Board Information": {
+      "Advanced Memory Protection Status: AdvancedECC": {
+        "Board CPU: 1": {
+          "Board Memory Frequency": "4400 MHz",
+          "Board Memory Voltage": "1100 MiB",
+          "Total Memory Size": "65536 MiB"
+        },
+        "Board CPU: 2": {
+          "Board Memory Frequency": "4400 MHz",
+          "Board Memory Voltage": "1100 MiB",
+          "Total Memory Size": "65536 MiB"
+        }
+      }
+    },
+    "Memory/DIMM Configuration 1": {
+      "Capacity": "0 MiB",
+      "Location": "PROC 1 DIMM 1",
+      "Memory Type": "DRAM",
+      "State": "Absent"
+    },
+    "Memory/DIMM Configuration 10": {
+      "Capacity": "16384 MiB",
+      "Health": "OK",
+      "Location": "PROC 1 DIMM 10",
+      "Memory Type": "DRAM DDR5",
+      "Speed": "4400 MHz",
+      "State": "Enabled",
+      "Status": "GoodInUse"
+    },
+    "Memory/DIMM Configuration 11": {
+      "Capacity": "0 MiB",
+      "Location": "PROC 1 DIMM 11",
+      "Memory Type": "DRAM",
+      "State": "Absent"
+    },
+    "Memory/DIMM Configuration 12": {
+      "Capacity": "0 MiB",
+      "Location": "PROC 1 DIMM 12",
+      "Memory Type": "DRAM",
+      "State": "Absent"
+    },
+    "Memory/DIMM Configuration 13": {
+      "Capacity": "0 MiB",
+      "Location": "PROC 1 DIMM 13",
+      "Memory Type": "DRAM",
+      "State": "Absent"
+    },
+    "Memory/DIMM Configuration 14": {
+      "Capacity": "16384 MiB",
+      "Health": "OK",
+      "Location": "PROC 1 DIMM 14",
+      "Memory Type": "DRAM DDR5",
+      "Speed": "4400 MHz",
+      "State": "Enabled",
+      "Status": "GoodInUse"
+    },
+    "Memory/DIMM Configuration 15": {
+      "Capacity": "0 MiB",
+      "Location": "PROC 1 DIMM 15",
+      "Memory Type": "DRAM",
+      "State": "Absent"
+    },
+    "Memory/DIMM Configuration 16": {
+      "Capacity": "0 MiB",
+      "Location": "PROC 1 DIMM 16",
+      "Memory Type": "DRAM",
+      "State": "Absent"
+    },
+    "Memory/DIMM Configuration 17": {
+      "Capacity": "0 MiB",
+      "Location": "PROC 2 DIMM 1",
+      "Memory Type": "DRAM",
+      "State": "Absent"
+    },
+    "Memory/DIMM Configuration 18": {
+      "Capacity": "0 MiB",
+      "Location": "PROC 2 DIMM 2",
+      "Memory Type": "DRAM",
+      "State": "Absent"
+    },
+    "Memory/DIMM Configuration 19": {
+      "Capacity": "16384 MiB",
+      "Health": "OK",
+      "Location": "PROC 2 DIMM 3",
+      "Memory Type": "DRAM DDR5",
+      "Speed": "4400 MHz",
+      "State": "Enabled",
+      "Status": "GoodInUse"
+    },
+    "Memory/DIMM Configuration 2": {
+      "Capacity": "0 MiB",
+      "Location": "PROC 1 DIMM 2",
+      "Memory Type": "DRAM",
+      "State": "Absent"
+    },
+    "Memory/DIMM Configuration 20": {
+      "Capacity": "0 MiB",
+      "Location": "PROC 2 DIMM 4",
+      "Memory Type": "DRAM",
+      "State": "Absent"
+    },
+    "Memory/DIMM Configuration 21": {
+      "Capacity": "0 MiB",
+      "Location": "PROC 2 DIMM 5",
+      "Memory Type": "DRAM",
+      "State": "Absent"
+    },
+    "Memory/DIMM Configuration 22": {
+      "Capacity": "0 MiB",
+      "Location": "PROC 2 DIMM 6",
+      "Memory Type": "DRAM",
+      "State": "Absent"
+    },
+    "Memory/DIMM Configuration 23": {
+      "Capacity": "16384 MiB",
+      "Health": "OK",
+      "Location": "PROC 2 DIMM 7",
+      "Memory Type": "DRAM DDR5",
+      "Speed": "4400 MHz",
+      "State": "Enabled",
+      "Status": "GoodInUse"
+    },
+    "Memory/DIMM Configuration 24": {
+      "Capacity": "0 MiB",
+      "Location": "PROC 2 DIMM 8",
+      "Memory Type": "DRAM",
+      "State": "Absent"
+    },
+    "Memory/DIMM Configuration 25": {
+      "Capacity": "0 MiB",
+      "Location": "PROC 2 DIMM 9",
+      "Memory Type": "DRAM",
+      "State": "Absent"
+    },
+    "Memory/DIMM Configuration 26": {
+      "Capacity": "16384 MiB",
+      "Health": "OK",
+      "Location": "PROC 2 DIMM 10",
+      "Memory Type": "DRAM DDR5",
+      "Speed": "4400 MHz",
+      "State": "Enabled",
+      "Status": "GoodInUse"
+    },
+    "Memory/DIMM Configuration 27": {
+      "Capacity": "0 MiB",
+      "Location": "PROC 2 DIMM 11",
+      "Memory Type": "DRAM",
+      "State": "Absent"
+    },
+    "Memory/DIMM Configuration 28": {
+      "Capacity": "0 MiB",
+      "Location": "PROC 2 DIMM 12",
+      "Memory Type": "DRAM",
+      "State": "Absent"
+    },
+    "Memory/DIMM Configuration 29": {
+      "Capacity": "0 MiB",
+      "Location": "PROC 2 DIMM 13",
+      "Memory Type": "DRAM",
+      "State": "Absent"
+    },
+    "Memory/DIMM Configuration 3": {
+      "Capacity": "16384 MiB",
+      "Health": "OK",
+      "Location": "PROC 1 DIMM 3",
+      "Memory Type": "DRAM DDR5",
+      "Speed": "4400 MHz",
+      "State": "Enabled",
+      "Status": "GoodInUse"
+    },
+    "Memory/DIMM Configuration 30": {
+      "Capacity": "16384 MiB",
+      "Health": "OK",
+      "Location": "PROC 2 DIMM 14",
+      "Memory Type": "DRAM DDR5",
+      "Speed": "4400 MHz",
+      "State": "Enabled",
+      "Status": "GoodInUse"
+    },
+    "Memory/DIMM Configuration 31": {
+      "Capacity": "0 MiB",
+      "Location": "PROC 2 DIMM 15",
+      "Memory Type": "DRAM",
+      "State": "Absent"
+    },
+    "Memory/DIMM Configuration 32": {
+      "Capacity": "0 MiB",
+      "Location": "PROC 2 DIMM 16",
+      "Memory Type": "DRAM",
+      "State": "Absent"
+    },
+    "Memory/DIMM Configuration 4": {
+      "Capacity": "0 MiB",
+      "Location": "PROC 1 DIMM 4",
+      "Memory Type": "DRAM",
+      "State": "Absent"
+    },
+    "Memory/DIMM Configuration 5": {
+      "Capacity": "0 MiB",
+      "Location": "PROC 1 DIMM 5",
+      "Memory Type": "DRAM",
+      "State": "Absent"
+    },
+    "Memory/DIMM Configuration 6": {
+      "Capacity": "0 MiB",
+      "Location": "PROC 1 DIMM 6",
+      "Memory Type": "DRAM",
+      "State": "Absent"
+    },
+    "Memory/DIMM Configuration 7": {
+      "Capacity": "16384 MiB",
+      "Health": "OK",
+      "Location": "PROC 1 DIMM 7",
+      "Memory Type": "DRAM DDR5",
+      "Speed": "4400 MHz",
+      "State": "Enabled",
+      "Status": "GoodInUse"
+    },
+    "Memory/DIMM Configuration 8": {
+      "Capacity": "0 MiB",
+      "Location": "PROC 1 DIMM 8",
+      "Memory Type": "DRAM",
+      "State": "Absent"
+    },
+    "Memory/DIMM Configuration 9": {
+      "Capacity": "0 MiB",
+      "Location": "PROC 1 DIMM 9",
+      "Memory Type": "DRAM",
+      "State": "Absent"
+    }
+  },
+  "power": {
+    "Power Metrics on 20 min. Intervals": {
+      "Average Power": "322 W",
+      "Max Consumed Power": "349 W",
+      "Minimum Consumed Power": "320 W"
+    },
+    "Power Supply 1": {
+      "Health": "OK",
+      "Hotplug Capable": true,
+      "Input Voltage": "230 V",
+      "Input Voltage Type": "ACHighLine",
+      "Last Power Output": "130 W",
+      "Power Capacity": "800 W",
+      "State": "Enabled",
+      "iPDU Capable": false
+    },
+    "Power Supply 2": {
+      "Health": "OK",
+      "Hotplug Capable": true,
+      "Input Voltage": "230 V",
+      "Input Voltage Type": "ACHighLine",
+      "Last Power Output": "192 W",
+      "Power Capacity": "800 W",
+      "State": "Enabled",
+      "iPDU Capable": false
+    },
+    "Total Power Capacity": "1600 W",
+    "Total Power Consumed": "322 W"
+  },
+  "processor": {
+    "Processor 1": {
+      "Cores": 8,
+      "Health": "OK",
+      "L1-Cache": "640 KB",
+      "L2-Cache": "16384 KB",
+      "L3-Cache": "23040 KB",
+      "Max Speed": "4000 MHz",
+      "Model": "Intel(R) Xeon(R) Gold 5415+",
+      "Socket": "Proc 1",
+      "Speed": "2900 MHz",
+      "State": "Enabled",
+      "Step": "8",
+      "Threads": 16
+    },
+    "Processor 2": {
+      "Cores": 8,
+      "Health": "OK",
+      "L1-Cache": "640 KB",
+      "L2-Cache": "16384 KB",
+      "L3-Cache": "23040 KB",
+      "Max Speed": "4000 MHz",
+      "Model": "Intel(R) Xeon(R) Gold 5415+",
+      "Socket": "Proc 2",
+      "Speed": "2900 MHz",
+      "State": "Enabled",
+      "Step": "8",
+      "Threads": 16
+    }
+  },
+  "proxy": {
+    "ProxyPassword": null,
+    "ProxyPort": null,
+    "ProxyServer": "",
+    "ProxyUserName": ""
+  },
+  "system": {
+    "1 MAC": "04:32:01:xx:xx:xx",
+    "10 MAC": "b8:3f:d2:xx:xx:xx",
+    "2 MAC": "04:32:01:xx:xx:xx",
+    "3 MAC": "04:32:01:xx:xx:xx",
+    "4 MAC": "04:32:01:xx:xx:xx",
+    "5 MAC": "30:3e:a7:xx:xx:xx",
+    "6 MAC": "30:3e:a7:xx:xx:xx",
+    "7 MAC": "14:23:f2:xx:xx:xx",
+    "8 MAC": "14:23:f2:xx:xx:xx",
+    "9 MAC": "b8:3f:d2:xx:xx:xx",
+    "Bios Version": "U54 v1.40 (06/29/2023)\r",
+    "Embedded NIC Count": 10,
+    "Model": "HPE ProLiant DL380 Gen11",
+    "Serial Number": "XXXXXXXXXX"
+  },
+  "thermals": {
+    "Sensor #10:": {
+      "Critical Threshold": "92 C",
+      "Current Temp": "32 C",
+      "Fatal Threshold": "None C",
+      "Health": "OK",
+      "Location": "Memory",
+      "State": "Enabled"
+    },
+    "Sensor #11:": {
+      "Critical Threshold": "None C",
+      "Current Temp": "0 C",
+      "Fatal Threshold": "None C",
+      "Location": "Memory",
+      "State": "Absent"
+    },
+    "Sensor #12:": {
+      "Critical Threshold": "110 C",
+      "Current Temp": "50 C",
+      "Fatal Threshold": "115 C",
+      "Health": "OK",
+      "Location": "SystemBoard",
+      "State": "Enabled"
+    },
+    "Sensor #13:": {
+      "Critical Threshold": "110 C",
+      "Current Temp": "45 C",
+      "Fatal Threshold": "115 C",
+      "Health": "OK",
+      "Location": "SystemBoard",
+      "State": "Enabled"
+    },
+    "Sensor #14:": {
+      "Critical Threshold": "72 C",
+      "Current Temp": "41 C",
+      "Fatal Threshold": "None C",
+      "Health": "OK",
+      "Location": "SystemBoard",
+      "State": "Enabled"
+    },
+    "Sensor #15:": {
+      "Critical Threshold": "None C",
+      "Current Temp": "0 C",
+      "Fatal Threshold": "None C",
+      "Location": "SystemBoard",
+      "State": "Absent"
+    },
+    "Sensor #16:": {
+      "Critical Threshold": "None C",
+      "Current Temp": "0 C",
+      "Fatal Threshold": "None C",
+      "Location": "SystemBoard",
+      "State": "Absent"
+    },
+    "Sensor #17:": {
+      "Critical Threshold": "60 C",
+      "Current Temp": "24 C",
+      "Fatal Threshold": "None C",
+      "Health": "OK",
+      "Location": "SystemBoard",
+      "State": "Enabled"
+    },
+    "Sensor #18:": {
+      "Critical Threshold": "100 C",
+      "Current Temp": "54 C",
+      "Fatal Threshold": "None C",
+      "Health": "OK",
+      "Location": "SystemBoard",
+      "State": "Enabled"
+    },
+    "Sensor #19:": {
+      "Critical Threshold": "110 C",
+      "Current Temp": "64 C",
+      "Fatal Threshold": "115 C",
+      "Health": "OK",
+      "Location": "SystemBoard",
+      "State": "Enabled"
+    },
+    "Sensor #1:": {
+      "Critical Threshold": "42 C",
+      "Current Temp": "22 C",
+      "Fatal Threshold": "47 C",
+      "Health": "OK",
+      "Location": "Intake",
+      "State": "Enabled"
+    },
+    "Sensor #20:": {
+      "Critical Threshold": "None C",
+      "Current Temp": "29 C",
+      "Fatal Threshold": "None C",
+      "Health": "OK",
+      "Location": "PowerSupply",
+      "State": "Enabled"
+    },
+    "Sensor #21:": {
+      "Critical Threshold": "None C",
+      "Current Temp": "40 C",
+      "Fatal Threshold": "None C",
+      "Health": "OK",
+      "Location": "PowerSupply",
+      "State": "Enabled"
+    },
+    "Sensor #22:": {
+      "Critical Threshold": "None C",
+      "Current Temp": "39 C",
+      "Fatal Threshold": "None C",
+      "Health": "OK",
+      "Location": "PowerSupply",
+      "State": "Enabled"
+    },
+    "Sensor #23:": {
+      "Critical Threshold": "None C",
+      "Current Temp": "49 C",
+      "Fatal Threshold": "None C",
+      "Health": "OK",
+      "Location": "PowerSupply",
+      "State": "Enabled"
+    },
+    "Sensor #24:": {
+      "Critical Threshold": "None C",
+      "Current Temp": "0 C",
+      "Fatal Threshold": "None C",
+      "Location": "SystemBoard",
+      "State": "Absent"
+    },
+    "Sensor #25:": {
+      "Critical Threshold": "None C",
+      "Current Temp": "0 C",
+      "Fatal Threshold": "None C",
+      "Location": "SystemBoard",
+      "State": "Absent"
+    },
+    "Sensor #26:": {
+      "Critical Threshold": "None C",
+      "Current Temp": "0 C",
+      "Fatal Threshold": "None C",
+      "Location": "SystemBoard",
+      "State": "Absent"
+    },
+    "Sensor #27:": {
+      "Critical Threshold": "None C",
+      "Current Temp": "0 C",
+      "Fatal Threshold": "None C",
+      "Location": "SystemBoard",
+      "State": "Absent"
+    },
+    "Sensor #28:": {
+      "Critical Threshold": "65 C",
+      "Current Temp": "29 C",
+      "Fatal Threshold": "None C",
+      "Health": "OK",
+      "Location": "SystemBoard",
+      "State": "Enabled"
+    },
+    "Sensor #29:": {
+      "Critical Threshold": "80 C",
+      "Current Temp": "35 C",
+      "Fatal Threshold": "85 C",
+      "Health": "OK",
+      "Location": "SystemBoard",
+      "State": "Enabled"
+    },
+    "Sensor #2:": {
+      "Critical Threshold": "99 C",
+      "Current Temp": "58 C",
+      "Fatal Threshold": "None C",
+      "Health": "OK",
+      "Location": "CPU",
+      "State": "Enabled"
+    },
+    "Sensor #30:": {
+      "Critical Threshold": "80 C",
+      "Current Temp": "37 C",
+      "Fatal Threshold": "85 C",
+      "Health": "OK",
+      "Location": "SystemBoard",
+      "State": "Enabled"
+    },
+    "Sensor #31:": {
+      "Critical Threshold": "80 C",
+      "Current Temp": "38 C",
+      "Fatal Threshold": "85 C",
+      "Health": "OK",
+      "Location": "SystemBoard",
+      "State": "Enabled"
+    },
+    "Sensor #32:": {
+      "Critical Threshold": "90 C",
+      "Current Temp": "39 C",
+      "Fatal Threshold": "95 C",
+      "Health": "OK",
+      "Location": "PowerSupply",
+      "State": "Enabled"
+    },
+    "Sensor #33:": {
+      "Critical Threshold": "None C",
+      "Current Temp": "0 C",
+      "Fatal Threshold": "None C",
+      "Location": "SystemBoard",
+      "State": "Absent"
+    },
+    "Sensor #34:": {
+      "Critical Threshold": "110 C",
+      "Current Temp": "67 C",
+      "Fatal Threshold": "115 C",
+      "Health": "OK",
+      "Location": "SystemBoard",
+      "State": "Enabled"
+    },
+    "Sensor #35:": {
+      "Critical Threshold": "110 C",
+      "Current Temp": "64 C",
+      "Fatal Threshold": "115 C",
+      "Health": "OK",
+      "Location": "SystemBoard",
+      "State": "Enabled"
+    },
+    "Sensor #36:": {
+      "Critical Threshold": "100 C",
+      "Current Temp": "59 C",
+      "Fatal Threshold": "110 C",
+      "Health": "OK",
+      "Location": "SystemBoard",
+      "State": "Enabled"
+    },
+    "Sensor #37:": {
+      "Critical Threshold": "75 C",
+      "Current Temp": "47 C",
+      "Fatal Threshold": "None C",
+      "Health": "OK",
+      "Location": "SystemBoard",
+      "State": "Enabled"
+    },
+    "Sensor #38:": {
+      "Critical Threshold": "75 C",
+      "Current Temp": "34 C",
+      "Fatal Threshold": "75 C",
+      "Health": "OK",
+      "Location": "SystemBoard",
+      "State": "Enabled"
+    },
+    "Sensor #39:": {
+      "Critical Threshold": "75 C",
+      "Current Temp": "37 C",
+      "Fatal Threshold": "None C",
+      "Health": "OK",
+      "Location": "SystemBoard",
+      "State": "Enabled"
+    },
+    "Sensor #3:": {
+      "Critical Threshold": "99 C",
+      "Current Temp": "53 C",
+      "Fatal Threshold": "None C",
+      "Health": "OK",
+      "Location": "CPU",
+      "State": "Enabled"
+    },
+    "Sensor #40:": {
+      "Critical Threshold": "75 C",
+      "Current Temp": "46 C",
+      "Fatal Threshold": "80 C",
+      "Health": "OK",
+      "Location": "SystemBoard",
+      "State": "Enabled"
+    },
+    "Sensor #4:": {
+      "Critical Threshold": "92 C",
+      "Current Temp": "33 C",
+      "Fatal Threshold": "None C",
+      "Health": "OK",
+      "Location": "Memory",
+      "State": "Enabled"
+    },
+    "Sensor #5:": {
+      "Critical Threshold": "None C",
+      "Current Temp": "0 C",
+      "Fatal Threshold": "None C",
+      "Location": "Memory",
+      "State": "Absent"
+    },
+    "Sensor #6:": {
+      "Critical Threshold": "92 C",
+      "Current Temp": "34 C",
+      "Fatal Threshold": "None C",
+      "Health": "OK",
+      "Location": "Memory",
+      "State": "Enabled"
+    },
+    "Sensor #7:": {
+      "Critical Threshold": "None C",
+      "Current Temp": "0 C",
+      "Fatal Threshold": "None C",
+      "Location": "Memory",
+      "State": "Absent"
+    },
+    "Sensor #8:": {
+      "Critical Threshold": "92 C",
+      "Current Temp": "31 C",
+      "Fatal Threshold": "None C",
+      "Health": "OK",
+      "Location": "Memory",
+      "State": "Enabled"
+    },
+    "Sensor #9:": {
+      "Critical Threshold": "None C",
+      "Current Temp": "0 C",
+      "Fatal Threshold": "None C",
+      "Location": "Memory",
+      "State": "Absent"
+    }
+  }
+}

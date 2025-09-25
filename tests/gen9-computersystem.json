@@ -1,0 +1,280 @@
+{
+  "Actions": {
+    "#ComputerSystem.Reset": {
+      "ResetType@Redfish.AllowableValues": [
+        "On",
+        "ForceOff",
+        "ForceRestart",
+        "Nmi",
+        "PushPowerButton"
+      ],
+      "target": "/redfish/v1/Systems/1/Actions/ComputerSystem.Reset/"
+    }
+  },
+  "AssetTag": "",
+  "AvailableActions": [
+    {
+      "Action": "Reset",
+      "Capabilities": [
+        {
+          "AllowableValues": [
+            "On",
+            "ForceOff",
+            "ForceRestart",
+            "Nmi",
+            "PushPowerButton"
+          ],
+          "PropertyName": "ResetType"
+        }
+      ]
+    }
+  ],
+  "Bios": {
+    "Current": {
+      "VersionString": "P89 v3.04 (08/04/2022)"
+    }
+  },
+  "BiosVersion": "P89 v3.04 (08/04/2022)",
+  "Boot": {
+    "BootSourceOverrideEnabled": "Disabled",
+    "BootSourceOverrideSupported": [
+      "None",
+      "Cd",
+      "Hdd",
+      "Usb",
+      "Utilities",
+      "Diags",
+      "BiosSetup",
+      "Pxe",
+      "UefiShell"
+    ],
+    "BootSourceOverrideTarget": "None"
+  },
+  "Description": "Computer System View",
+  "EthernetInterfaces": {
+    "@odata.id": "/rest/v1/Systems/1/EthernetInterfaces"
+  },
+  "HostCorrelation": {
+    "HostMACAddress": [
+      "30:e1:71:62:c7:ac",
+      "30:e1:71:62:c7:ad",
+      "30:e1:71:62:c7:ae",
+      "30:e1:71:62:c7:af",
+      "48:df:37:0b:8c:48",
+      "48:df:37:0b:8c:49"
+    ],
+    "HostName": "gen9server",
+    "IPAddress": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "HostName": "gen9server",
+  "Id": "1",
+  "IndicatorLED": "Off",
+  "LogServices": {
+    "@odata.id": "/rest/v1/Systems/1/LogServices"
+  },
+  "Manufacturer": "HPE",
+  "Memory": {
+    "Status": {
+      "HealthRollUp": "OK"
+    },
+    "TotalSystemMemoryGB": 768
+  },
+  "MemorySummary": {
+    "Status": {
+      "HealthRollUp": "OK"
+    },
+    "TotalSystemMemoryGiB": 768
+  },
+  "Model": "ProLiant DL360 Gen9",
+  "Name": "Computer System",
+  "Oem": {
+    "Hp": {
+      "@odata.type": "#HpComputerSystemExt.1.2.2.HpComputerSystemExt",
+      "Actions": {
+        "#HpComputerSystemExt.PowerButton": {
+          "PushType@Redfish.AllowableValues": [
+            "Press",
+            "PressAndHold"
+          ],
+          "target": "/redfish/v1/Systems/1/Actions/Oem/Hp/ComputerSystemExt.PowerButton/"
+        },
+        "#HpComputerSystemExt.SystemReset": {
+          "ResetType@Redfish.AllowableValues": [
+            "ColdBoot",
+            "AuxCycle"
+          ],
+          "target": "/redfish/v1/Systems/1/Actions/Oem/Hp/ComputerSystemExt.SystemReset/"
+        }
+      },
+      "AvailableActions": [
+        {
+          "Action": "PowerButton",
+          "Capabilities": [
+            {
+              "AllowableValues": [
+                "Press",
+                "PressAndHold"
+              ],
+              "PropertyName": "PushType"
+            },
+            {
+              "AllowableValues": [
+                "/Oem/Hp"
+              ],
+              "PropertyName": "Target"
+            }
+          ]
+        },
+        {
+          "Action": "ServerSigRecompute",
+          "Capabilities": [
+            {
+              "AllowableValues": [
+                "/Oem/Hp"
+              ],
+              "PropertyName": "Target"
+            }
+          ]
+        },
+        {
+          "Action": "SystemReset",
+          "Capabilities": [
+            {
+              "AllowableValues": [
+                "ColdBoot",
+                "AuxCycle"
+              ],
+              "PropertyName": "ResetType"
+            },
+            {
+              "AllowableValues": [
+                "/Oem/Hp"
+              ],
+              "PropertyName": "Target"
+            }
+          ]
+        }
+      ],
+      "Battery": [
+        {
+          "Condition": "Ok",
+          "ErrorCode": 0,
+          "FirmwareVersion": "2.1",
+          "Index": 1,
+          "MaxCapWatts": 96,
+          "Model": "727258-B21",
+          "Present": "Yes",
+          "ProductName": "HPE Smart Storage Battery ",
+          "SerialNumber": "XXXXXXXXXXXXXX",
+          "Spare": "871264-001"
+        }
+      ],
+      "Bios": {
+        "Backup": {
+          "Date": "10/16/2020",
+          "Family": "P89",
+          "VersionString": "P89 v2.80 (10/16/2020)"
+        },
+        "Current": {
+          "Date": "08/04/2022",
+          "Family": "P89",
+          "VersionString": "P89 v3.04 (08/04/2022)"
+        },
+        "UefiClass": 2
+      },
+      "DeviceDiscoveryComplete": {
+        "AMSDeviceDiscovery": "NoAMS",
+        "DeviceDiscovery": "vMainDeviceDiscoveryComplete",
+        "SmartArrayDiscovery": "Complete"
+      },
+      "IntelligentProvisioningIndex": 3,
+      "IntelligentProvisioningLocation": "System Board",
+      "IntelligentProvisioningVersion": "N/A",
+      "PostState": "FinishedPost",
+      "PowerAllocationLimit": 1000,
+      "PowerAutoOn": "Restore",
+      "PowerOnDelay": "Minimum",
+      "PowerRegulatorMode": "Max",
+      "PowerRegulatorModesSupported": [
+        "OSControl",
+        "Dynamic",
+        "Max",
+        "Min"
+      ],
+      "TrustedModules": [
+        {
+          "Status": "NotPresent"
+        }
+      ],
+      "Type": "HpComputerSystemExt.1.2.2",
+      "VirtualProfile": "Inactive",
+      "links": {
+        "BIOS": {
+          "href": "/rest/v1/systems/1/bios"
+        },
+        "EthernetInterfaces": {
+          "href": "/rest/v1/Systems/1/EthernetInterfaces"
+        },
+        "FirmwareInventory": {
+          "href": "/rest/v1/Systems/1/FirmwareInventory"
+        },
+        "Memory": {
+          "href": "/rest/v1/Systems/1/Memory"
+        },
+        "NetworkAdapters": {
+          "href": "/rest/v1/Systems/1/NetworkAdapters"
+        },
+        "PCIDevices": {
+          "href": "/rest/v1/Systems/1/PCIDevices"
+        },
+        "PCISlots": {
+          "href": "/rest/v1/Systems/1/PCISlots"
+        },
+        "SUT": {
+          "href": "/rest/v1/systems/1/hpsut"
+        },
+        "SecureBoot": {
+          "href": "/rest/v1/Systems/1/SecureBoot"
+        },
+        "SmartStorage": {
+          "href": "/rest/v1/Systems/1/SmartStorage"
+        },
+        "SoftwareInventory": {
+          "href": "/rest/v1/Systems/1/SoftwareInventory"
+        }
+      }
+    }
+  },
+  "Power": "On",
+  "PowerState": "On",
+  "ProcessorSummary": {
+    "Count": 2,
+    "Model": "Intel(R) Xeon(R) CPU E5-2650 v4 @ 2.20GHz",
+    "Status": {
+      "HealthRollUp": "OK"
+    }
+  },
+  "Processors": {
+    "Count": 2,
+    "ProcessorFamily": "Intel(R) Xeon(R) CPU E5-2650 v4 @ 2.20GHz",
+    "Status": {
+      "HealthRollUp": "OK"
+    }
+  },
+  "SKU": "755258-B21",
+  "SerialNumber": "XXXXXXXXXX",
+  "Status": {
+    "Health": "OK",
+    "State": "Enabled"
+  },
+  "SystemType": "Physical",
+  "Type": "ComputerSystem.1.0.1",
+  "UUID": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
+}
