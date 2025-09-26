@@ -64,3 +64,7 @@ The `ilorest` command, used in the background of the plugin, queries the Redfish
 - Gen9: Works but with very limited number of hardware elements, shows overall health state
 - Gen10: Works
 - Gen11: Works
+
+## ToDos
+- Support remote ILO (using `-a` and credentials)
+- Support ignore list to ignore specific discovered hardware elements
