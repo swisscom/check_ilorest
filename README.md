@@ -43,35 +43,35 @@ The exit codes of `check_ilorest` are based on other monitoring plugins and foll
 
 ```
 root@linux ~ # /usr/lib64/nagios/plugins/check_ilorest.py -o prometheus
-HELP ilorest_hardware_health Overall health status of server. 0=OK. 1=Warning. 2=Critical
-TYPE ilorest_hardware_health gauge
+#HELP ilorest_hardware_health Overall health status of server. 0=OK. 1=Warning. 2=Critical
+#TYPE ilorest_hardware_health gauge
 ilorest_hardware_health 0
-HELP ilorest_hardware_health_biosorhardwarehealth Health status of hardware component BiosOrHardwareHealth
-TYPE ilorest_hardware_health_biosorhardwarehealth gauge
+#HELP ilorest_hardware_health_biosorhardwarehealth Health status of hardware component BiosOrHardwareHealth
+#TYPE ilorest_hardware_health_biosorhardwarehealth gauge
 ilorest_hardware_health_biosorhardwarehealth 0
-HELP ilorest_hardware_health_fans Health status of hardware component Fans
-TYPE ilorest_hardware_health_fans gauge
+#HELP ilorest_hardware_health_fans Health status of hardware component Fans
+#TYPE ilorest_hardware_health_fans gauge
 ilorest_hardware_health_fans 0
-HELP ilorest_hardware_health_memory Health status of hardware component Memory
-TYPE ilorest_hardware_health_memory gauge
+#HELP ilorest_hardware_health_memory Health status of hardware component Memory
+#TYPE ilorest_hardware_health_memory gauge
 ilorest_hardware_health_memory 0
-HELP ilorest_hardware_health_network Health status of hardware component Network
-TYPE ilorest_hardware_health_network gauge
+#HELP ilorest_hardware_health_network Health status of hardware component Network
+#TYPE ilorest_hardware_health_network gauge
 ilorest_hardware_health_network 0
-HELP ilorest_hardware_health_powersupplies Health status of hardware component PowerSupplies
-TYPE ilorest_hardware_health_powersupplies gauge
+#HELP ilorest_hardware_health_powersupplies Health status of hardware component PowerSupplies
+#TYPE ilorest_hardware_health_powersupplies gauge
 ilorest_hardware_health_powersupplies 0
-HELP ilorest_hardware_health_processors Health status of hardware component Processors
-TYPE ilorest_hardware_health_processors gauge
+#HELP ilorest_hardware_health_processors Health status of hardware component Processors
+#TYPE ilorest_hardware_health_processors gauge
 ilorest_hardware_health_processors 0
-HELP ilorest_hardware_health_smartstoragebattery Health status of hardware component SmartStorageBattery
-TYPE ilorest_hardware_health_smartstoragebattery gauge
+#HELP ilorest_hardware_health_smartstoragebattery Health status of hardware component SmartStorageBattery
+#TYPE ilorest_hardware_health_smartstoragebattery gauge
 ilorest_hardware_health_smartstoragebattery 0
-HELP ilorest_hardware_health_storage Health status of hardware component Storage
-TYPE ilorest_hardware_health_storage gauge
+#HELP ilorest_hardware_health_storage Health status of hardware component Storage
+#TYPE ilorest_hardware_health_storage gauge
 ilorest_hardware_health_storage 0
-HELP ilorest_hardware_health_temperatures Health status of hardware component Temperatures
-TYPE ilorest_hardware_health_temperatures gauge
+#HELP ilorest_hardware_health_temperatures Health status of hardware component Temperatures
+#TYPE ilorest_hardware_health_temperatures gauge
 ilorest_hardware_health_temperatures 0
 ```
 
