@@ -10,7 +10,17 @@ Authors:
 - Swisscom (Schweiz) AG
 - Claudio Kuenzler
 
-This monitoring plugin was developped at and for Swisscom (Schweiz) AG and was published as open source software in 2025.
+This monitoring plugin was developed at and for Swisscom (Schweiz) AG and was published as open source software in 2025.
+
+# Usage
+
+## Requirements
+As mentioned, `check_ilorest` uses the `ilorest` command. This command can be installed as RPM package, as PyPI package (using `pip3`) or built from source. Have a look at the official [ilorest repository](https://github.com/HewlettPackard/python-redfish-utility). The [ilorest user guide](https://servermanagementportal.ext.hpe.com/docs/redfishclients/ilorest-userguide/installation/) lists different installation method.
+
+Besides `ilorest` available as command, the following requirements are needed:
+- python3
+- Must be run locally on a HPE server (remote ILO target is TODO)
+- Must be run as root (`ilorest` requirement)
 
 ## Monitoring Plugin
 The plugin was developped for the purpose to easily integrate into classic system monitoring software, such as Icinga or Nagios.
@@ -20,9 +30,16 @@ root@linux ~ # /usr/lib64/nagios/plugins/check_ilorest.py
 ILOREST HARDWARE OK: Hardware is healthy. Server: HPE ProLiant DL380 Gen11, S/N: XXXXXXXXXX, System BIOS: U54 v1.40 (06/29/2023)
 ```
 
+The exit codes of `check_ilorest` are based on other monitoring plugins and follow the monitoring plugin development guidelines. 
+
+- Exit Code 0: OK, no hardware problems detected
+- Exit Code 1: WARNING, degraded hardware detected
+- Exit Code 2: CRITICAL, hardware failure detected
+- Exit Code 3: UNKNOWN, there was a problem executing `check_ilorest` correctly
+
 
 ## Prometheus readiness
-The plugin can be executed with the optional parameter `-o` to choose a different output format. By using `-o prometheus` the plugin outputs the information in Prometheus metrics exposition format. It could be used in combination with the Prometheus [Script Exporter](https://github.com/ricoberger/script_exporter) to execute the plugin and scrape the metrics through Script Exporter's API.
+`check_ilorest` was developed for both classic and metrics-based monitoring tools. The plugin can be executed with the optional parameter `-o` to choose a different output format. By using `-o prometheus` the plugin outputs the information in Prometheus metrics exposition format. It could be used in combination with the Prometheus [Script Exporter](https://github.com/ricoberger/script_exporter) to execute the plugin and scrape the metrics through Script Exporter's API.
 
 ```
 root@linux ~ # /usr/lib64/nagios/plugins/check_ilorest.py -o prometheus
