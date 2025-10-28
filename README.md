@@ -21,6 +21,7 @@ Besides `ilorest` available as command, the following requirements are needed:
 - python3
 - Must be run locally on a HPE server (remote ILO target is TODO)
 - Must be run as root (`ilorest` requirement)
+- TMPDIR (default: `/tmp`) must be mounted with `exec` option => alternatively use `-t` parameter (see `--help`)
 
 ## Monitoring Plugin
 The plugin was developped for the purpose to easily integrate into classic system monitoring software, such as Icinga or Nagios.
@@ -78,10 +79,22 @@ ilorest_hardware_health_temperatures 0
 ## Compatibility with ProLiant server generations
 The `ilorest` command, used in the background of the plugin, queries the Redfish API integrated into the ILO controller. Newer server generations have a better and more detailled implementation inside ILO, allowing to query more information and more hardware elements.
 
-- Gen9: Works but with very limited number of hardware elements, shows overall health state
-- Gen10: Works
-- Gen11: Works
+|HW generation|supported|notes|
+|---------------|---------|-----|
+|Gen9 | :white_check_mark: | limited number of hardware elements, shows overall health state |
+|Gen10| :white_check_mark: |  |
+|Gen11| :white_check_mark: |  |
+
+## Compatibility with ilorest releases
+The `check_ilorest` monitoring plugin has been successfully tested on the following `ilorest` releases. This list is non-conclusive. Most `ilorest` releases should actually work.
+
+|ilorest release|supported|notes|
+|---------------|---------|-----|
+|4.6.0 | :white_check_mark: |  |
+|6.2.0 | :x: | `--nocache` not working |
+|6.3.0 | :white_check_mark: | Slower than 4.6.x release |
 
 ## ToDos
 - Support remote ILO (using `-a` and credentials)
 - Support ignore list to ignore specific discovered hardware elements
+- Support performance data / metrics (in progress)
