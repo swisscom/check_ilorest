@@ -77,7 +77,7 @@ ilorest_hardware_health_temperatures 0
 ```
 
 ## Compatibility with ProLiant server generations
-The `ilorest` command, used in the background of the plugin, queries the Redfish API integrated into the ILO controller. Newer server generations have a better and more detailled implementation inside ILO, allowing to query more information and more hardware elements.
+The `ilorest` command, used in the background of the plugin, queries the Redfish API integrated into the ILO controller (available since ILO4 v2.10+, ILO5 v1.20+, ILO6 v1.05+). Newer server generations have a better and more detailled implementation inside ILO, allowing to query more information and more hardware elements.
 
 |HW generation|supported|notes|
 |---------------|---------|-----|
