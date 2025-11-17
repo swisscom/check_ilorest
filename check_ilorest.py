@@ -28,6 +28,8 @@
 #@ 20250827 Adjustments for public release as open source software (1.0.0)
 #@ 20251028 Add metrics parameter for System Usage metrics (1.1.0)
 #@ 20251028 Add version parameter to show plugin version (1.1.0)
+#@ 20251117 Move ilorest execution into function run_ilorest (1.2.0)
+#@ 20251117 Add power parameter for Power Usage metrics (1.2.0)
 #@---------------------------------------------------------------------
 import sys
 import time
@@ -37,7 +39,7 @@ import argparse
 import re
 
 # Define version
-pluginversion='1.1.0'
+pluginversion='1.2.0'
 # Define variables and defaults
 output_format='nagios'
 ilo_user=''
@@ -45,6 +47,7 @@ ilo_password=''
 ilo_url=''
 metrics=False
 verbose=False
+power=False
 timeout=60
 tmpdir=''
 serverinfo=''
@@ -71,6 +74,7 @@ def getargs() :
   parser.add_argument('-m', '--metrics', dest='metrics', action='store_true', default=False, required=False, help='Show performance data/metrics for system usage')
   parser.add_argument('-v', '--verbose', dest='verbose', action='store_true', default=False, required=False, help='Enable verbose mode for debugging plugin')
   parser.add_argument('-V', '--version', dest='version', action='store_true', default=False, required=False, help='Show plugin version')
+  parser.add_argument('--power', dest='power', action='store_true', default=False, required=False, help='Additional ilorest query for power usage metrics')
   args = parser.parse_args()
   
   if (args.version):
@@ -97,6 +101,10 @@ def getargs() :
   if (args.verbose):
       global verbose
       verbose = args.verbose
+
+  if (args.power):
+      global power
+      power = args.power
 
   if (args.tmpdir):
       global tmpdir
@@ -125,15 +133,16 @@ def dep_ilorest() :
     print("ILOREST HARDWARE UNKNOWN: ilorest command not found")
     sys.exit(ExitUnknown)
 # +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-# Check ComputerSystem
-def check_computersystem() :
+# ilorest execution
+def run_ilorest(*selector) :
+  verboseoutput("Selector is: %s" % (selector[0]))
   try:
       if tmpdir:
-          #cmd = "export TMPDIR=%s; cat tests/gen11-computersystem-degraded.json" % tmpdir # FOR USING TEST JSON
-          cmd = "export TMPDIR=%s; ilorest --nocache --nologo get --select ComputerSystem. --json" % tmpdir # FOR NORMAL USE
+          cmd = "export TMPDIR=%s; ilorest --nocache --nologo get --select %s. --json" % (tmpdir, selector[0]) # FOR NORMAL USE
+          #cmd = "cat tests/gen11-computersystem-degraded.json" # FOR TESTS USING LOCAL JSON FILE
       else:
-          #cmd = "cat tests/gen11-computersystem-degraded.json" # FOR USING TEST JSON
-          cmd = "ilorest --nocache --nologo get --select ComputerSystem. --json" # FOR NORMAL USE
+          cmd = "ilorest --nocache --nologo get --select %s. --json" % selector[0] # FOR NORMAL USE
+          #cmd = "cat tests/gen11-computersystem-degraded.json" # FOR TESTS USING LOCAL JSON FILE
       verboseoutput("Launching command: %s" % (cmd))
       process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
       output, err = process.communicate()
@@ -144,10 +153,15 @@ def check_computersystem() :
 
   # Verify we have working JSON data
   try:
+      global data
       data = json.loads(output)
   except json.JSONDecodeError as e:
       print("ILOREST HARDWARE CRITICAL: Unable to decode JSON, Error: {}. Manually run command ({}) to verify JSON output.".format(e, cmd))
       sys.exit(ExitUnknown)
+# +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+# Check ComputerSystem
+def check_computersystem() :
+  run_ilorest("ComputerSystem")
 
   # Retrieve server information
   cs_HostName = data['HostName']
@@ -198,10 +212,32 @@ def check_computersystem() :
             perfdata.append("{}={};;;0;100".format(key, systemusage[key]))
           else:
             perfdata.append("{}={};;;;".format(key, systemusage[key]))
+# +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+def check_power() :
+  if metrics:
+    global perfdata
+    run_ilorest("Power")
+    if data['PowerControl'][0]['PowerConsumedWatts']:
+      powerusage = data['PowerControl'][0]['PowerConsumedWatts']
+      verboseoutput("PowerConsumedWatts: {}".format(powerusage))
+    if output_format == 'nagios':
+      perfdata.append("PowerUsage={};;;;".format(powerusage))
+    if output_format == 'prometheus':
+      perfdata.append("#HELP ilorest_hardware_powerusage")
+      perfdata.append("#TYPE ilorest_hardware_powerusage gauge")
+      perfdata.append("ilorest_hardware_powerusage {}".format(powerusage))
+    if data['PowerSupplies'][0]['LastPowerOutputWatts']:
+      powersupplies = data['PowerSupplies']
+      psnumber = 1
       if output_format == 'prometheus':
-        perfdata = '\n'.join(perfdata)
-      else:
-        perfdata = ' '.join(perfdata)
+        perfdata.append("#HELP ilorest_hardware_power_supply_usage")
+        perfdata.append("#TYPE ilorest_hardware_power_supply_usage gauge")
+      for psu in powersupplies:
+        if output_format == 'nagios':
+          perfdata.append("PS{}Usage={};;;;".format(psnumber, psu.get("LastPowerOutputWatts")))
+        if output_format == 'prometheus':
+          perfdata.append("ilorest_hardware_power_supply_usage{{psu='{}'}} {}".format(psnumber, psu.get("LastPowerOutputWatts")))
+        psnumber += 1
 # +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 def parse_json_recursively(json_object, target_key, *parent_key):
     if type(json_object) is dict and json_object:
@@ -227,8 +263,17 @@ if __name__ == '__main__':
   # Hardware checks
   check_computersystem()
 
+  if power:
+    check_power()
+
   # Merge alerts
   alert_list = alert_list + warning_list + critical_list
+
+  # Merge perfdata
+  if output_format == 'prometheus':
+    perfdata = '\n'.join(perfdata)
+  else:
+    perfdata = ' '.join(perfdata)
 
   if alert_list: # Hardware problems
       if output_format == 'prometheus':
