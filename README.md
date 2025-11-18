@@ -97,4 +97,3 @@ The `check_ilorest` monitoring plugin has been successfully tested on the follow
 ## ToDos
 - Support remote ILO (using `-a` and credentials)
 - Support ignore list to ignore specific discovered hardware elements
-- Support performance data / metrics (in progress)
