@@ -30,6 +30,7 @@
 #@ 20251028 Add version parameter to show plugin version (1.1.0)
 #@ 20251117 Move ilorest execution into function run_ilorest (1.2.0)
 #@ 20251117 Add power parameter for Power Usage metrics (1.2.0)
+#@ 20251119 Fix labels in power supply metrics (1.2.1)
 #@---------------------------------------------------------------------
 import sys
 import time
@@ -39,7 +40,7 @@ import argparse
 import re
 
 # Define version
-pluginversion='1.2.0'
+pluginversion='1.2.1'
 # Define variables and defaults
 output_format='nagios'
 ilo_user=''
@@ -236,7 +237,7 @@ def check_power() :
         if output_format == 'nagios':
           perfdata.append("PS{}Usage={};;;;".format(psnumber, psu.get("LastPowerOutputWatts")))
         if output_format == 'prometheus':
-          perfdata.append("ilorest_hardware_power_supply_usage{{psu='{}'}} {}".format(psnumber, psu.get("LastPowerOutputWatts")))
+          perfdata.append("ilorest_hardware_power_supply_usage{{psu=\"{}\"}} {}".format(psnumber, psu.get("LastPowerOutputWatts")))
         psnumber += 1
 # +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 def parse_json_recursively(json_object, target_key, *parent_key):
